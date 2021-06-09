@@ -1,5 +1,4 @@
 class HeadersShopify
-
   def self.call
     {
       'Content-Type': 'application/json',
@@ -7,5 +6,4 @@ class HeadersShopify
       'X-Shopify-Access-Token': ENV['X_SHOPIFY_ACCESS_TOKEN']
     }
   end
-
 end
