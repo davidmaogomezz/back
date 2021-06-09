@@ -3,7 +3,7 @@ module Api
     class OrdersController < Api::V1::ApiController
 
       def index
-        render json: { response: 'ok'}
+        render json: Orders.call(params)
       end
 
     end
