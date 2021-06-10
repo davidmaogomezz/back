@@ -1,0 +1,5 @@
+:sidekiq_pid: 'sidekiq.pid'
+:sidekiq_log: 'log/sidekiq.log'
+:concurrency: 3
+:queues:
+  - default
