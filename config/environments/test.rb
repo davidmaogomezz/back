@@ -45,7 +45,7 @@ Rails.application.configure do
   config.active_storage.service = :test
 
   # Use test adapter for ActiveJob
-  config.active_job.queue_adapter = :test
+  config.active_job.queue_adapter = :sidekiq
 
   config.after_initialize do
     Bullet.enable = true
