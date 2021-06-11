@@ -10,11 +10,11 @@ default: &default
 
 development:
  <<: *default
- database: back_development
+ database: <%= ENV['DB_NAME'] %>_development
 
 test:
  <<: *default
- database: back_test
+ database: <%= ENV['DB_NAME'] %>_test
 
 production:
  <<: *default
