@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_16_171441) do
+ActiveRecord::Schema.define(version: 2021_06_10_235113) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_trgm"
@@ -92,6 +92,14 @@ ActiveRecord::Schema.define(version: 2020_07_16_171441) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["error_group_id"], name: "index_exception_hunter_errors_on_error_group_id"
+  end
+
+  create_table "orders", force: :cascade do |t|
+    t.boolean "confirmed"
+    t.string "financial_status"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.jsonb "data"
   end
 
   create_table "settings", force: :cascade do |t|
