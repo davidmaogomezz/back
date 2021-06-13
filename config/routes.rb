@@ -24,6 +24,7 @@ Rails.application.routes.draw do
         get :must_update, on: :collection
       end
       resources :orders, only: %i[index]
+      resources :shipments, only: %i[create]
     end
   end
 end
